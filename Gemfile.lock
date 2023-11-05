@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    peacer (0.0.2)
+      rack (~> 2.2)
+      webrick (~> 1.8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.20.0)
+    rack (2.2.8)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rake (13.1.0)
+    webrick (1.8.1)
+
+PLATFORMS
+  arm64-darwin-22
+
+DEPENDENCIES
+  minitest (~> 5.14)
+  peacer!
+  rack-test (~> 1.1)
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.3.26
