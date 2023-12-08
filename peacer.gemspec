@@ -30,6 +30,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "webrick", "~>1.8"
   spec.add_development_dependency "rack-test", "~>1.1"
   spec.add_development_dependency "minitest", "~>5.14"
+  spec.add_dependency "erubis"
+  spec.add_dependency "multi_json"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

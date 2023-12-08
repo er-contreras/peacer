@@ -1,6 +1,15 @@
 require_relative 'test_helper'
 
+class TestController < Peacer::Controller
+  def index
+    "Hello!"
+  end
+end
+
 class TestApp < Peacer::Application
+  def get_controller_and_action(env)
+    [TestController, "index"]
+  end
 end
 
 class PeacerAppTest < Minitest::Test
@@ -11,7 +20,8 @@ class PeacerAppTest < Minitest::Test
   end
 
   def test_request
-    get '/'
+    get '/example/route'
+
     assert last_response.ok?
     body = last_response.body
     assert body['Hello']

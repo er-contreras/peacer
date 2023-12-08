@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require_relative "peacer/version"
-# require 'peacer/array'
 require 'peacer/routing'
+require 'peacer/util'
+require 'peacer/dependencies'
+require 'peacer/controller'
+require 'peacer/file_model'
 
 module Peacer
   class Application
@@ -24,13 +27,7 @@ module Peacer
     end
   end
 
-  class Controller
-    def initialize(env)
-      @env = env
-    end
-
-    def env
-      @env
-    end
+  def self.framework_root
+    __dir__
   end
 end
